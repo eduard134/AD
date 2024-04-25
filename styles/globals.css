@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background: #0a0a0a;
+  overflow-x: hidden;
+  touch-action: pan-y;
+  overscroll-behavior-y: none;
+}
+
+.rotated-image {
+  width: 20%;
+  transform: rotate(180deg);
+}
+
+@media (max-width: 760px) {
+  .rotated-image {
+    transform: rotate(-90deg);
+    /* Rotate the image 90 degrees for screens with a width of 768px or less */
+    width: 100%;
+  }
+}
+
+.rotated-image1 {
+  width: 20%;
+}
+
+@media (max-width: 760px) {
+  .rotated-image1 {
+    transform: rotate(90deg);
+    /* Rotate the image 90 degrees for screens with a width of 768px or less */
+    width: 100%;
+  }
+}
+
+.blur {
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 1px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: #242424;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient(#f9333a, #c03167);
+}
+
+.border-gradient {
+  border-image: linear-gradient(to bottom right, #f9333a 0%, #c03167 50%, #E77CA4 100%);
+  border-image-slice: 1;
+  border-radius: 5px;
+  border: 4px solid transparent;
+}
+
+.bg-cover1 {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
